@@ -1,13 +1,120 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.hero-section {
+  min-height: 70vh;
+  background-image: url(./assets/images/slide_01.jpg);
+  background-size: cover;
+  position: relative;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.4;
+}
+.form-wrappr {
+  max-width: 600px;
+  padding: 10px;
+  margin-left: auto;
+  border-radius: 5px;
+  margin-right: auto;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(28 28 28 / 8%) 0px 2px 8px;
+  border: 1px solid rgb(232, 232, 232);
+}
+.search-results {
+  max-width: 600px;
+  position: absolute;
+  max-height: 400px;
+  overflow-x: auto;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  margin-left: auto;
+  border-radius: 5px;
+  margin-right: auto;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(28 28 28 / 8%) 0px 2px 8px;
+  border: 1px solid rgb(232, 232, 232);
+}
+.hero-section h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.hero-section .hero-section-inner input,
+.hero-section .hero-section-inner button {
+  box-shadow: none;
+  outline: 0;
+}
+.hero-section .hero-section-inner {
+  position: relative;
+  z-index: 5;
+}
+.hero-section .hero-section-inner > h3 {
+  font-size: 32px;
+}
+.menu-hero {
+  min-height: 40vh;
+  background-image: url(./assets/images/slide_02.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+}
+.login-modal-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  z-index: 9;
+}
+.login-modal-wrapper::before {
+  content: "";
+  background: #000;
+  opacity: 0.4;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+.login-modal-inner {
+  background-color: #fff;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  z-index: 15;
+  border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  .menu-lists .card .card-body,
+  .menu-lists .card .card-body button {
+    font-size: 12px;
+  }
+  .menu-lists .card .card-body {
+    padding: 10px 10px;
+  }
+  .menu-wrapper > div button {
+    margin-bottom: 4px !important;
+  }
+  .menu-wrapper > div button + h2 {
+    font-size: 12px;
+  }
 }
